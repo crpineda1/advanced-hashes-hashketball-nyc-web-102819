@@ -199,4 +199,20 @@ def player_numbers(team_name)
 end
 
 
+# all stats for selected player
+def player_stats(player_name)
+  result - []
+  game_hash.each do |side,team|
+    team.each do |specs,info|
+      next unless specs == :players
+
+      info.each do |player|
+        if player[:player_name] == player_name
+          result.push(player)
+        end
+        
+      end
+end
+
+
 #
