@@ -319,8 +319,8 @@ end
 def long_name_steals_a_ton()
 
   longest_name = player_with_longest_name
-  result = ""
-
+  most_steals = ""
+  
   def most_steals()
     points = 0
     result = ""
@@ -329,8 +329,8 @@ def long_name_steals_a_ton()
       team.each do |specs,info|
         if specs == :players
           info.each do |player|
-            if player[:steals] > steals
-              steals = player[:steals]
+            if player[:steals] > most_steals
+              most_steals = player[:steals]
               result = player[:player_name]
 
             end
@@ -340,7 +340,6 @@ def long_name_steals_a_ton()
     end
     result
   end
-  most_steals = most_steals()
-
+  
   return longet name == most_steals
 end
