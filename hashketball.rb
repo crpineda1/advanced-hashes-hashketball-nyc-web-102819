@@ -232,7 +232,7 @@ def big_shoe_rebounds()
       if specs == :players
         info.each do |player|
           if player[:shoe] > shoe_size
-            result = player[player_name:]
+            result = player[:player_name]
 
           end
         end
