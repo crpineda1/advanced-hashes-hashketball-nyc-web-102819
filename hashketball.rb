@@ -170,7 +170,18 @@ def team_colors(team_name)
   end
 end
 
-#binding.pry
 
-
-#
+# names of BOTH teams
+def team_names
+  result = []
+  game_hash.each do |side,team|
+    team.each do |specs|
+      if specs == :team_name
+        result.push(spec[:team_name])
+        
+      end
+      
+    end 
+  
+  return result
+end
