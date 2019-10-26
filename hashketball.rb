@@ -307,7 +307,7 @@ game_hash.each do |side,team|
           count = player[:player_name].length
           result = player[:player_name]
 
-        end   
+        end
       end
     end
   end
