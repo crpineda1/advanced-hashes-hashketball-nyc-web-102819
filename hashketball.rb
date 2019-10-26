@@ -172,7 +172,7 @@ end
 
 
 # names of BOTH teams
-def team_names
+def team_names()
   result = []
   game_hash.each do |side,team|
     team.each do |specs|
