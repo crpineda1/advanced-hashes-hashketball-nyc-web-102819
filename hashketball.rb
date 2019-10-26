@@ -204,12 +204,13 @@ def player_stats(player_name)
   result = {}
   game_hash.each do |side,team|
     team.each do |specs,info|
-      next unless specs == :players
-
-      info.each do |player|
-        if player[:player_name] == player_name
-          result = player
-          result.delete(:player_name)
+      if specs == :players
+        
+        info.each do |player|
+          if player[:player_name] == player_name
+            result = player
+            result.delete(:player_name)
+          end
         end
       end
     end
@@ -218,4 +219,17 @@ def player_stats(player_name)
 end
 
 
-#
+# # rebounds for player with biggest foot 
+def big_shoe_rebounds()
+  result1 = 0
+  result2 = 0
+  
+  game_hash.each do |side,team|
+    team.each do |specs,info|
+      next unless specs == :players 
+      
+    end
+    
+  end
+  
+end
