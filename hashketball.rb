@@ -177,11 +177,11 @@ def team_names
   game_hash.each do |side,team|
     team.each do |specs|
       if specs == :team_name
-        result.push(spec[:team_name])
-
+        resxult.push(spec[:team_name])
       end
-
     end
-
+  end
   return result
 end
+
+      
