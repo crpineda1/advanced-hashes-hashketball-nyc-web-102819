@@ -178,10 +178,10 @@ def team_names
     team.each do |specs|
       if specs == :team_name
         result.push(spec[:team_name])
-        
+
       end
-      
-    end 
-  
+
+    end
+
   return result
 end
