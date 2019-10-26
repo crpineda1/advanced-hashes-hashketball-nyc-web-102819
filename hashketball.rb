@@ -297,7 +297,7 @@ end
 def player_with_longest_name()
 count = 0
 result = ""
-
+binding.pry
 game_hash.each do |side,team|
   team.each do |specs,info|
     if specs == :players
@@ -305,7 +305,7 @@ game_hash.each do |side,team|
         if player[:player_name].length > count
           count = player[:player_name].count
           result = player[:player_name]
-binding.pry
+
         end
       end
     end
