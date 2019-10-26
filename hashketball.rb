@@ -210,8 +210,9 @@ def player_stats(player_name)
         if player[:player_name] == player_name
           result.push(player)
         end
-
       end
+    end
+  end
 end
 
 
