@@ -201,7 +201,7 @@ end
 
 # all stats for selected player
 def player_stats(player_name)
-  result = []
+  result = {}
   game_hash.each do |side,team|
     team.each do |specs,info|
       next unless specs == :players
