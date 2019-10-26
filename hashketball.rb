@@ -320,7 +320,7 @@ def long_name_steals_a_ton()
 
   longest_name = player_with_longest_name
   most_steals = ""
-  
+
   def most_steals()
     points = 0
     result = ""
@@ -340,6 +340,6 @@ def long_name_steals_a_ton()
     end
     result
   end
-  
+
   return longet name == most_steals
 end
