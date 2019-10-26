@@ -131,11 +131,12 @@ end
 def num_points_scored(player_name)
   game_hash.each do |side, team|
     team.each do |specs, info|
-      next unless specs == :players
+      if specs == :players
 
-      info.each do |player|
-        if player[:player_name] == player_name
-          return player[:points]
+        info.each do |player|
+          if player[:player_name] == player_name
+            return player[:points]
+          end
         end
       end
     end
@@ -150,11 +151,12 @@ def shoe_size (player_name)
 
   game_hash.each do |side, team|
     team.each do |specs, info|
-      next unless specs == :players
+      if specs == :players
 
-      info.each do |player|
-        if player[:player_name] == player_name
-          return player[:shoe]
+        info.each do |player|
+          if player[:player_name] == player_name
+            return player[:shoe]
+          end
         end
       end
     end
@@ -221,15 +223,19 @@ end
 
 # # rebounds for player with biggest foot
 def big_shoe_rebounds()
-  result1 = 0
-  result2 = 0
+  shoe_size = 0
+  result = 0
 
   game_hash.each do |side,team|
     team.each do |specs,info|
-      next unless specs == :players
+      if specs == :players
+        info.each do |player|
+          if player[shoe:] > shoe_size
+            result = player[:rebounds]
 
+          end
+        end
+      end
     end
-
   end
-
 end
