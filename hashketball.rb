@@ -302,11 +302,12 @@ game_hash.each do |side,team|
   team.each do |specs,info|
     if specs == :players
       info.each do |player|
+
         if player[:player_name].length > count
-          count = player[:player_name].count
+          count = player[:player_name].length
           result = player[:player_name]
 
-        end
+        end   
       end
     end
   end
