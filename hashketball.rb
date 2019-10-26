@@ -318,7 +318,7 @@ end
 # find out if the person with the longet name also hast the most steals
 def long_name_steals_a_ton?()
 
-  longest_name = player_with_longest_name
+  longest_name = player_with_longest_name()
   most_steals = ""
 
   def most_steals()
