@@ -338,7 +338,7 @@ def long_name_steals_a_ton()
         end
       end
     end
-    result
+    #result
   end
 
   return longet name == most_steals
