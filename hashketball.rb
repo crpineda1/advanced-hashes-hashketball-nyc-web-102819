@@ -208,7 +208,7 @@ def player_stats(player_name)
 
       info.each do |player|
         if player[:player_name] == player_name
-          result.push(player)
+          result = player
         end
       end
     end
