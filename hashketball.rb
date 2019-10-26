@@ -181,7 +181,7 @@ def team_names()
 end
 
 
-#play number for selected team
+#jersey numbers for selected team
 def player_numbers(team_name)
   result = []
   game_hash.each do |side,team|
