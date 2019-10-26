@@ -318,19 +318,16 @@ end
 # find out if the person with the longet name also hast the most steals
 def long_name_steals_a_ton?()
 
-  longest_name = player_with_longest_name()
-  most_steals = ""
-
   def most_steals()
-    points = 0
+    steals = 0
     result = ""
 
     game_hash.each do |side,team|
       team.each do |specs,info|
         if specs == :players
           info.each do |player|
-            if player[:steals] > most_steals
-              most_steals = player[:steals]
+            if player[:steals] > steals
+              steals = player[:steals]
               result = player[:player_name]
 
             end
@@ -338,6 +335,8 @@ def long_name_steals_a_ton?()
         end
       end
     end
+    result
   end
-  return longet name == most_steals
+
+  return player_with_longest_name() == most_steals()
 end
