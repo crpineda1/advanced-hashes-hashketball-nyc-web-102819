@@ -209,11 +209,11 @@ def player_stats(player_name)
       info.each do |player|
         if player[:player_name] == player_name
           result.push(player)
-          result.delete(:player_name)
         end
       end
     end
   end
+  result.delete(:player_name)
   result
 end
 
