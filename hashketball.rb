@@ -1,7 +1,6 @@
-
 require 'pry'
 
- # HASKETBALL
+# HASKETBALL
 
 def game_hash
   {
@@ -11,7 +10,7 @@ def game_hash
       colors: ["Black","White"],
       players:
       [
-        { name: "Alan Anderson",
+        { player_name: "Alan Anderson",
           number: 0,
           shoe: 16,
           points: 22,
@@ -21,7 +20,7 @@ def game_hash
           blocks: 1,
           slam_dunks: 1
         },
-        { name: "Reggie Evans",
+        { player_name: "Reggie Evans",
           number: 30,
           shoe: 14,
           points: 12,
@@ -121,47 +120,43 @@ def game_hash
       ]
     },
   }
+
 end
 
 # levels gamehash[side][team][specs][info][player]
 
 #METHODS
 
-#number points scred by each player
+#number points scred by seleted player
 def num_points_scored(player_name)
-  game_hash.each do |side,team|
-
-    team.each do |specs,info|
-
+  game_hash.each do |side, team|
+    team.each do |specs, info|
       next unless specs == :players
 
-    info.each do |player|
-      if player[:player_name] == player_name
-        return player[:points]
+      info.each do |player|
+        if player[:player_name] == player_name
+          return player[:points]
+        end
       end
     end
   end
 end
 
+#binding.pry
 
-## individual player info
-# def player_stats(input)
-#   output = {}
-#
-#   game_hash.each do |side,team|
-#     team.each do|specs,info|
-#
-#       if specs == :players
-#
-#         game_hash[side][team][specs][info][player]
-#
-#
-#         end
-#
-#       end
-#
-#
-#
-#
-#     end
-#   end
+
+#shoe size for selected player()
+def shoe_size (player_name)
+
+  game_hash.each do |side, team|
+    team.each do |specs, info|
+      next unless specs == :players
+
+      info.each do |player|
+        if player[:player_name] == player_name
+          return player[:shoe]
+        end
+      end
+    end
+  end
+end
