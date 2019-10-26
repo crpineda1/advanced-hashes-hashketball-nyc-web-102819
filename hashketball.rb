@@ -189,8 +189,9 @@ def player_numbers(team_name)
       team.each do |specs, info|
         next unless specs == :players
 
-      info.each do |player|
-        result.push(player[:number])
+        info.each do |player|
+          result.push(player[:number])
+        end
       end
     end
   end
