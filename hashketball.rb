@@ -190,6 +190,7 @@ def player_numbers(team_name)
         result.push([:info][:player][:number])
       end
     end
+  end
   return result
 end
 
