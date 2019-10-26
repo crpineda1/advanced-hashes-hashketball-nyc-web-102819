@@ -175,8 +175,7 @@ end
 def team_names()
   result = []
   game_hash.each do |side,team|
-    team.each do |specs|
-        result.push(spec[:team_name])
+    result.push(team[:team_name])
     end
   end
   return result
