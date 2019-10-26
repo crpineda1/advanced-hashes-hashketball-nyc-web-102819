@@ -165,7 +165,7 @@ end
 def team_colors(team_name)
   game_hash.each do |side,team|
     if team[:team_name] == team_name
-      return team[:colors]
+      return %wteam[:colors]
     end
   end
 end
