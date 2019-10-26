@@ -241,3 +241,27 @@ def big_shoe_rebounds()
   end
   result
 end
+
+
+#BONUS
+
+# player who scored the most Points
+def most_points_scored()
+  points = 0
+  result = ""
+
+  game_hash.each do |side,team|
+    team.each do |specs,info|
+      if specs == :players
+        info.each do |player|
+          if player[:points] > points
+            points = player[:points]
+            result = player[:player_name]
+
+          end
+        end
+      end
+    end
+  end
+  result
+end
